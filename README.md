@@ -2,9 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Tools
 
-* Node 20.15.0
-* NPM 10.7.0
-* PNPM 9.6.0
+- Node 20.15.0
+- NPM 10.7.0
+- PNPM 9.6.0
 
 ## Getting Started
 
@@ -39,7 +39,6 @@ Run docker image:
 ```
 docker run -p 3000:3000 (image-name)
 ```
-
 
 ## Learn More
 
