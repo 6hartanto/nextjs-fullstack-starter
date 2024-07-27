@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
+
+services:
+  pgsql:
+    image: postgres:16-alpine
+    container_name: nextjsfullstack_pgsql
+    hostname: postgres
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      # Optional: only use when using custom query for preparation
+      # - ./initialize.sql:/docker-entrypoint-initdb.d/initialize.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: securedb
+      POSTGRES_DB: nextjsfullstack
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d nextjsfullstack']
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+volumes:
+  pg_data:
+    driver: local
