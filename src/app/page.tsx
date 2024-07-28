@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +9,13 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
+        <Button
+          variant="default"
+          size="sm"
+          className="fixed right-0 top-0 mt-8 mr-8"
+        >
+          Shadecn Button
+        </Button>
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">

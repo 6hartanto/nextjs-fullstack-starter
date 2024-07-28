@@ -4,5 +4,4 @@
 git fetch origin main
 echo typescript checking...
 pnpm tsc -p ./tsconfig.json
-pnpm format
 pnpm lint
